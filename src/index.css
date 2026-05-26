@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide native scrollbar completely */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* html::-webkit-scrollbar { */
+  /* display: none; Chrome, Safari and Opera */
+/* } */
+
+/* html::-webkit-scrollbar-track { */
+  /* display: none; */
+/* } */
+
+html::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  @apply bg-cream text-stone-800;
+  overflow-x: hidden;
+  /* Ensure scrollbar is hidden */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  @apply text-stone-900;
+}
+
+body, html {
+  @apply overflow-x-hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-2 outline-offset-2 outline-gold-500;
+}
+
+/* Remove transition-all from * — too broad; only apply where needed */
+button {
+  @apply rounded-none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Yet-another-react-lightbox overrides */
+.yarl__container {
+  background-color: rgba(32, 30, 28, 0.97) !important;
+}
