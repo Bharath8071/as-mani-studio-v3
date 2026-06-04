@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { MessageCircle, Camera, Heart, Baby, Sparkles, Cake, Users } from 'lucide-react';
 import { CinematicHero } from '../components/CinematicHero';
+import { PreviousWorksCarousel } from '../components/PreviousWorksCarousel';
 import { SectionLabel } from '../components/SectionLabel';
 import { TestimonialsGrid } from '../components/TestimonialsGrid';
 
@@ -157,6 +158,8 @@ export function Home() {
           boxShadow: '0 -12px 48px rgba(32,30,28,0.18)',
         }}
       >
+
+        <PreviousWorksCarousel />
 
         {/* ── 2. SERVICES — old icon-on-top style ── */}
         <section className="pt-24 pb-20 px-6">

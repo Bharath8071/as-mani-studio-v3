@@ -105,7 +105,7 @@ export function CustomScrollbar() {
         onMouseLeave={() => setIsHovering(false)}
       >
         {/* Scrollbar Track - Ultra thin white line (aligned) */}
-        <div className="absolute right-[-4px] top-0 h-screen w-[2px] bg-white opacity-60" />
+        <div className="absolute right-[-4px] top-0 h-screen w-[2px] bg-[#B8934A] opacity-50" />
 
         {/* Scrollbar Thumb - Luxury gold with hover glow */}
         <motion.div
