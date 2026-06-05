@@ -25,17 +25,13 @@ const galleryImages = [
   { src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80' },
   { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80' },
   { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80' },
-  { src: 'https://images.unsplash.com/photo-1606395614352-e0490f1d7213?w=800&q=80' },
-  { src: 'https://images.unsplash.com/photo-1606216836861-cffce6dd7d5c?w=800&q=80' },
+  { src: 'https://images.unsplash.com/photo-1670529775607-e92672ebebb7?q=80&w=686' },
+  { src: 'https://images.unsplash.com/photo-1563808599481-34a342e44508?q=80&w=687' },
   { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80' },
-  { src: 'https://images.unsplash.com/photo-1617875537368-f06191e92fa0?w=800&q=80' },
-  { src: 'https://images.unsplash.com/photo-1519293388590-a11f0d7f7ad8?w=800&q=80' },
-];
-
-const steps = [
-  { num: '01', title: 'Enquire',           desc: "Tell us about your event and what you're looking for" },
-  { num: '02', title: 'Meet & Plan',       desc: 'We discuss your vision and customise every detail' },
-  { num: '03', title: 'Receive Memories',  desc: 'Professionally edited photos and cinematic films delivered' },
+  { src: 'https://images.unsplash.com/photo-1721677156275-99bb64adb36d?q=80&w=1074' },
+  { src: 'https://images.unsplash.com/photo-1670529775607-e92672ebebb7?q=80&w=686' },
+  { src: 'https://images.unsplash.com/photo-1698802060842-412d2963f897?q=80&w=1170'},
+  { src: 'https://images.unsplash.com/photo-1751429114275-c5c552587527?q=80&w=686' },
 ];
 
 const testimonials = [
@@ -142,6 +138,8 @@ export function Home() {
     { height: '320px', rotate:  1.4 },
     { height: '250px', rotate: -0.6 },
     { height: '300px', rotate:  1.0 },
+    { height: '280px', rotate: -1.3 },
+    { height: '320px', rotate:  1.1 },
   ];
 
   return (
@@ -151,9 +149,9 @@ export function Home() {
 
       {/* ── CURVED RISING CARD ── */}
       <div
-        className="relative z-10 bg-cream"
+        className="relative z-10 bg-cream overflow-hidden"
         style={{
-          borderRadius: '28px 28px 0 0',
+          borderRadius: '25px 25px 0 0',
           marginTop: '-20px',
           boxShadow: '0 -12px 48px rgba(32,30,28,0.18)',
         }}
@@ -258,24 +256,26 @@ export function Home() {
               {/* Col 1 */}
               <div className="flex flex-col gap-3 mt-8">
                 <CollageItem src={galleryImages[0].src} index={0} height={collageConfig[0].height} rotate={collageConfig[0].rotate} />
-                <CollageItem src={galleryImages[4].src} index={4} height={collageConfig[4].height} rotate={collageConfig[4].rotate} />
+                <CollageItem src={galleryImages[1].src} index={1} height={collageConfig[1].height} rotate={collageConfig[1].rotate} />
+                <CollageItem src={galleryImages[2].src} index={2} height={collageConfig[2].height} rotate={collageConfig[2].rotate} />
               </div>
               {/* Col 2 — offset down */}
               <div className="flex flex-col gap-3 mt-0">
-                <CollageItem src={galleryImages[1].src} index={1} height={collageConfig[1].height} rotate={collageConfig[1].rotate} />
+                <CollageItem src={galleryImages[3].src} index={3} height={collageConfig[3].height} rotate={collageConfig[3].rotate} />
+                <CollageItem src={galleryImages[4].src} index={4} height={collageConfig[4].height} rotate={collageConfig[4].rotate} />
                 <CollageItem src={galleryImages[5].src} index={5} height={collageConfig[5].height} rotate={collageConfig[5].rotate} />
               </div>
               {/* Col 3 — offset up */}
               <div className="flex flex-col gap-3 mt-12">
-                <CollageItem src={galleryImages[2].src} index={2} height={collageConfig[2].height} rotate={collageConfig[2].rotate} />
                 <CollageItem src={galleryImages[6].src} index={6} height={collageConfig[6].height} rotate={collageConfig[6].rotate} />
+                <CollageItem src={galleryImages[7].src} index={7} height={collageConfig[7].height} rotate={collageConfig[7].rotate} />
                 <CollageItem src={galleryImages[8].src} index={8} height={collageConfig[8].height} rotate={collageConfig[8].rotate} />
               </div>
               {/* Col 4 */}
               <div className="flex flex-col gap-3 mt-4">
-                <CollageItem src={galleryImages[3].src} index={3} height={collageConfig[3].height} rotate={collageConfig[3].rotate} />
-                <CollageItem src={galleryImages[7].src} index={7} height={collageConfig[7].height} rotate={collageConfig[7].rotate} />
                 <CollageItem src={galleryImages[9].src} index={9} height={collageConfig[9].height} rotate={collageConfig[9].rotate} />
+                <CollageItem src={galleryImages[10].src} index={10} height={collageConfig[10].height} rotate={collageConfig[10].rotate} />
+                <CollageItem src={galleryImages[11].src} index={11} height={collageConfig[11].height} rotate={collageConfig[11].rotate} />
               </div>
             </div>
 
